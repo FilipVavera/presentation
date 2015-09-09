@@ -52,7 +52,7 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 3.77em; }
+  font-size: 3em; }
 
 .reveal h2 {
   font-size: 2.11em; }
@@ -72,8 +72,11 @@ body {
 .reveal strong {
   color: #054059; }
 
-.reveal strong.color {
+.reveal strong.color1 {
   color: #94c54f; }
+
+.reveal strong.color2 {
+  color: #065371; }
 
 .reveal p {
   margin: 20px 0;

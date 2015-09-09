@@ -29,9 +29,11 @@ $headingLetterSpacing: -0.03em;
 $headingTextTransform: none;
 $headingColor: #87BD3E;
 $headingColor2: #054059;
+$heading1Size: 3em;
 $selectionBackgroundColor: #000;
 $mainFontSize: 30px;
-$strongColor: lighten( $headingColor, 5% );
+$strongColor1: lighten( $headingColor, 5% );
+$strongColor2: lighten( $headingColor2, 5% );
 
 
 // Theme template ------------------------------
