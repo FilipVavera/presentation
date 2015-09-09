@@ -13,20 +13,21 @@
 
 // Include theme-specific fonts
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic);
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #111;
+$backgroundColor: #002c62;
 
-$mainFont: 'Open Sans', sans-serif;
+$mainFont: 'Roboto', sans-serif;
 $linkColor: #e7ad52;
 $linkColorHover: lighten( $linkColor, 20% );
 $headingFont: 'Montserrat', Impact, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: -0.03em;
 $headingTextTransform: none;
-$selectionBackgroundColor: #e7ad52;
+$headingColor: #8ec549;
+$selectionBackgroundColor: #c3c6c8;
 $mainFontSize: 30px;
 
 
