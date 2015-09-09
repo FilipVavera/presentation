@@ -17,7 +17,7 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #DADADA;
+$backgroundColor: #fff;
 
 $mainFont: 'Effra', sans-serif;
 $mainColor: #1A1A1A;
@@ -31,7 +31,7 @@ $headingColor: #87BD3E;
 $headingColor2: #054059;
 $selectionBackgroundColor: #000;
 $mainFontSize: 30px;
-$strongColor: darken( $headingColor, 10% );
+$strongColor: lighten( $headingColor, 5% );
 
 
 // Theme template ------------------------------
