@@ -6,7 +6,6 @@
 
 body {
 	@include bodyBackground();
-	background-color: $backgroundColor;
 }
 
 .reveal {
@@ -34,22 +33,36 @@ body {
 
 .reveal h1,
 .reveal h2,
-.reveal h3,
+.reveal h3 {
+  margin: $headingMargin;
+  color: $headingColor;
+
+  font-family: $headingFont;
+  font-weight: $headingFontWeight;
+  line-height: $headingLineHeight;
+  letter-spacing: $headingLetterSpacing;
+
+  text-transform: $headingTextTransform;
+  text-shadow: $headingTextShadow;
+
+  word-wrap: break-word;
+}
+
 .reveal h4,
 .reveal h5,
 .reveal h6 {
-	margin: $headingMargin;
-	color: $headingColor;
+  margin: $headingMargin;
+  color: $headingColor2;
 
-	font-family: $headingFont;
-	font-weight: $headingFontWeight;
-	line-height: $headingLineHeight;
-	letter-spacing: $headingLetterSpacing;
+  font-family: $headingFont;
+  font-weight: $headingFontWeight;
+  line-height: $headingLineHeight;
+  letter-spacing: $headingLetterSpacing;
 
-	text-transform: $headingTextTransform;
-	text-shadow: $headingTextShadow;
+  text-transform: $headingTextTransform;
+  text-shadow: $headingTextShadow;
 
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .reveal h1 {font-size: $heading1Size; }
@@ -66,8 +79,12 @@ body {
  * OTHER
  *********************************************/
 
+.reveal strong {
+  color: $headingColor2;
+}
+
 .reveal strong.color {
-  color: $headingColor;
+  color: $strongColor;
 }
 
 .reveal p {
@@ -268,7 +285,7 @@ body {
 .reveal section img {
 	margin: 15px 0;
 	background: rgba(255,255,255,0.12);
-	border: 4px solid $mainColor;
+	border: 0;
 
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
