@@ -27,8 +27,8 @@
 			link.type = 'text/css';
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
-            var imgs = ['arch1.png', 'arch2.png', 'arch3.png', 'arch4.png', 'arch5.png', 'arch6.png'];
-            var i = 1;
+            var imgs = ['ani1.png', 'ani2.png', 'ani3.png', 'ani4.png', 'ani5.png', 'ani6.png','ani7.png'];
+            var i = 0;
 		</script>
 
 		<!--[if lt IE 9]>
@@ -68,17 +68,26 @@
 				<section>
 					<section>
 						<h2>Architecture</h2>
-                        <img id="ins-arch" src="ins-arch/arch1.png" height="500px" />
-                        <button onclick="nextImg();">Next img</button>
+                        <img style="margin: 0;" id="ins-arch" src="resources/ins/ani1.png" height="550px" /><br>
+						<button class="myButton" onclick="prevImg();">Prev img</button>
+                        <button class="myButton" onclick="nextImg();">Next img</button>
 						<script>
                             function nextImg() {
                                 var img = document.getElementById('ins-arch');
-                                img.src = "ins-arch/" + imgs[i];
-                                i = i + 1;
-                                if (i == imgs.length) {
-                                    i = 0;
-                                }
+								i = i + 1;
+								if (i == imgs.length) {
+									i = 0;
+								}
+                                img.src = "resources/ins/" + imgs[i];
                             }
+							function prevImg(){
+								var img = document.getElementById('ins-arch');
+								i = i - 1;
+								if (i < 0) {
+									i = imgs.length - 1;
+								}
+								img.src = "resources/ins/" + imgs[i];
+							}
                         </script>
 					</section>
 					<section>
@@ -218,6 +227,8 @@ with open('results.json', 'r') as f:
 				controls: true,
 				progress: true,
 				center: true,
+				history: true,
+
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
