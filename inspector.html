@@ -27,6 +27,8 @@
 			link.type = 'text/css';
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
+            var imgs = ['arch1.png', 'arch2.png', 'arch3.png', 'arch4.png', 'arch5.png', 'arch6.png'];
+            var i = 1;
 		</script>
 
 		<!--[if lt IE 9]>
@@ -66,10 +68,18 @@
 				<section>
 					<section>
 						<h2>Architecture</h2>
-                        <ul>
-                            <li class="fragment"><a href="https://sencha.testrail.net/">TestRail app</a> with API</li>
-                            <li class="fragment">Test results from automated tests</li>
-                        </ul>
+                        <img id="ins-arch" src="ins-arch/arch1.png" height="500px" />
+                        <button onclick="nextImg();">Next img</button>
+						<script>
+                            function nextImg() {
+                                var img = document.getElementById('ins-arch');
+                                img.src = "ins-arch/" + imgs[i];
+                                i = i + 1;
+                                if (i == imgs.length) {
+                                    i = 0;
+                                }
+                            }
+                        </script>
 					</section>
 					<section>
 						<h2>TestRail API</h2>
