@@ -78,7 +78,7 @@
                                     document.getElementById('prevButton').disabled = false;
                                 }
 								i = i + 1;
-								if (i >= imgs.length) {
+								if (i >= imgs.length - 1) {
                                     document.getElementById('nextButton').disabled = true;
 									i = imgs.length - 1;
 								}
@@ -90,7 +90,7 @@
                                     document.getElementById('nextButton').disabled = false;
                                 }
 								i = i - 1;
-								if (i < 0) {
+								if (i <= 0) {
                                     document.getElementById('prevButton').disabled = true;
 									i = 0;
 								}
