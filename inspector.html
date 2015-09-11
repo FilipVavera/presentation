@@ -57,110 +57,76 @@
 				<section>
 					<h2>What is goal?</h2>
 					<ol>
-						<li class="fragment">We have automated tests and we have results from them</li>
-						<li class="fragment">We have a lot of test results</li>
-						<li class="fragment">We have TestRail with API</li>
-                        <li class="fragment"><strong class="color">...so why do it manually?</strong></li>
+						<li class="fragment">We want to have automated tests for Sencha Inspector</li>
+						<li class="fragment">We want to be able to automatically test as much as possible</li>
+						<li class="fragment">We want to be able to run tests on all supported platforms</li>
 					</ol>
 				</section>
 
-				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
-						<h2>Architecture</h2>
-                        <img style="margin: 0;" id="ins-arch" src="resources/ins/ani1.png" height="550px" /><br>
-						<button id="prevButton" onclick="prevImg();" disabled>Prev img</button>
-                        <button id="nextButton" onclick="nextImg();">Next img</button>
-						<script>
-                            function nextImg() {
-                                var img = document.getElementById('ins-arch');
-                                if (i == 0) {
-                                    document.getElementById('prevButton').disabled = false;
-                                }
-								i = i + 1;
-								if (i >= imgs.length - 1) {
-                                    document.getElementById('nextButton').disabled = true;
-									i = imgs.length - 1;
-								}
-                                img.src = "resources/ins/" + imgs[i];
-                            }
-							function prevImg(){
-								var img = document.getElementById('ins-arch');
-                                if (i == imgs.length - 1) {
-                                    document.getElementById('nextButton').disabled = false;
-                                }
-								i = i - 1;
-								if (i <= 0) {
-                                    document.getElementById('prevButton').disabled = true;
-									i = 0;
-								}
-								img.src = "resources/ins/" + imgs[i];
-							}
-                        </script>
-					</section>
-					<section>
-						<h2>TestRail API</h2>
-						<p>Some official low-level implementation for python</p>
-					</section>
-					<section>
-						<h2>Test results</h2>
-						<p>They are in various format. Every project has his own structure.</p>
-                        <br />
-                        <br />
-                        <p class="fragment"><strong class="color">We need standard file structure of test results</strong></p>
-					</section>
-                    <section>
-                        <h2>results.json</h2>
-                        <pre><code class="json" data-trim contenteditable>
-{
-    "user": "Your_TestRail_username",
-    "password": "Your_API_key_or_password",
-    "project_id": 0,
-    "suite_id": 0,
+					<h2>Sencha Inspector</h2>
+					<ol>
+						<li class="fragment">Allow us to Inspect ExtJS / Touch Apps
+							<ul>
+								<li>Component overview</li>
+								<li>Event viewer</li>
+								<li>Layuot Runs</li>
+								<li>Stores explorer</li>
+								<li>App details and App Architecture</li>
+							</ul>
+						</li>
+						<li class="fragment">Brings special features such as
+							<ul>
+								<li>SWAM Secure SQL DB Explorer</li>
+								<li>ExtJS 6 live theming</li>
+							</ul>
+						</li>
+						<li class="fragment">Can be run on Windows, OS X, <i>Linux (planned)</i></li>
+						<div class="fragment">
+						<li >Can inspect apps in all supported browsers by ExtJS</li>
+						</div>
 
-    "run_name": "Name of your run - system - browser - build - timestamp is added automatically",
-    "sections": [
-        {
-            "name": "Section name",
-            "description": "Section description - optional",
-            "sections": [
-                {
-                    "name": "Sub section",
-                    "cases": [
-                        {
 
-                        }
-                    ]
-                },
-                {
-
-                }
-            ],
-            "cases": [
-                {
-                    "title": "Case name",
-                    "result": false,
-                    "comment": "Optional and is added only when test failed"
-                },
-                {
-                    "title": "Another case",
-                    "result": true,
-                    "comment": "This comment will be ignored"
-                },
-                {
-
-                }
-            ]
-        },
-        {
-
-        }
-    ]
-}
-                        </code></pre>
-                    </section>
+					</ol>
 				</section>
 
+				<section>
+					<h2>Architecture</h2>
+					<img style="margin: 0;" id="ins-arch" src="resources/ins/ani1.png" height="550px" /><br>
+					<button id="prevButton" onclick="prevImg();" disabled>Prev img</button>
+					<button id="nextButton" onclick="nextImg();">Next img</button>
+					<script>
+						function nextImg() {
+							var img = document.getElementById('ins-arch');
+							if (i == 0) {
+								document.getElementById('prevButton').disabled = false;
+							}
+							i = i + 1;
+							if (i >= imgs.length - 1) {
+								document.getElementById('nextButton').disabled = true;
+								i = imgs.length - 1;
+							}
+							img.src = "resources/ins/" + imgs[i];
+						}
+						function prevImg(){
+							var img = document.getElementById('ins-arch');
+							if (i == imgs.length - 1) {
+								document.getElementById('nextButton').disabled = false;
+							}
+							i = i - 1;
+							if (i <= 0) {
+								document.getElementById('prevButton').disabled = true;
+								i = 0;
+							}
+							img.src = "resources/ins/" + imgs[i];
+						}
+					</script>
+				</section>
+
+				<section>
+					<h2>How it works</h2>
+					<img style="margin: 0;" id="ins-arch" src="resources/ins/schema.png" /><br>
+				</section>
 				<section>
                     <section>
 					    <h2>How it works</h2>
