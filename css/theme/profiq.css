@@ -281,41 +281,29 @@ body {
 .reveal .slide-number {
   color: #F08844; }
 
-.reveal button.myButton {
-  -moz-box-shadow: 0px 10px 14px -7px #3e7327;
-  -webkit-box-shadow: 0px 10px 14px -7px #3e7327;
-  box-shadow: 0px 10px 14px -7px #3e7327;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #87BD3E), color-stop(1, #87BD3E));
-  background: -moz-linear-gradient(top, #87BD3E 5%, #87BD3E 100%);
-  background: -webkit-linear-gradient(top, #87BD3E 5%, #87BD3E 100%);
-  background: -o-linear-gradient(top, #87BD3E 5%, #87BD3E 100%);
-  background: -ms-linear-gradient(top, #87BD3E 5%, #87BD3E 100%);
-  background: linear-gradient(to bottom, #87BD3E 5%, #87BD3E 100%);
+.reveal button {
   background-color: #87BD3E;
-  -moz-border-radius: 14px;
-  -webkit-border-radius: 14px;
-  border-radius: 14px;
-  border: 1px solid #4b8f29;
-  display: inline-block;
   cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 13px;
-  font-weight: bold;
-  padding: 5px 20px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #5b8a3c; }
+  height: auto;
+  border: 0;
+  line-height: 14px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 7px 13px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  margin-bottom: 9px;
+  border-radius: 0; }
 
-.reveal button.myButton:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #72b352), color-stop(1, #77b55a));
-  background: -moz-linear-gradient(top, #72b352 5%, #77b55a 100%);
-  background: -webkit-linear-gradient(top, #72b352 5%, #77b55a 100%);
-  background: -o-linear-gradient(top, #72b352 5%, #77b55a 100%);
-  background: -ms-linear-gradient(top, #72b352 5%, #77b55a 100%);
-  background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
-  background-color: #72b352; }
+.reveal button:active {
+  background-color: #F08844; }
 
-.reveal button.myButton:active {
-  position: relative;
-  top: 1px; }
+.reveal button:hover {
+  background-color: #a7a7a7; }
+
+.reveal button[disabled], button[disabled]:active, button[disabled]:hover {
+  background-color: #c1c1c1;
+  cursor: inherit; }

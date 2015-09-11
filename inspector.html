@@ -69,22 +69,30 @@
 					<section>
 						<h2>Architecture</h2>
                         <img style="margin: 0;" id="ins-arch" src="resources/ins/ani1.png" height="550px" /><br>
-						<button class="myButton" onclick="prevImg();">Prev img</button>
-                        <button class="myButton" onclick="nextImg();">Next img</button>
+						<button id="prevButton" onclick="prevImg();" disabled>Prev img</button>
+                        <button id="nextButton" onclick="nextImg();">Next img</button>
 						<script>
                             function nextImg() {
                                 var img = document.getElementById('ins-arch');
+                                if (i == 0) {
+                                    document.getElementById('prevButton').disabled = false;
+                                }
 								i = i + 1;
-								if (i == imgs.length) {
-									i = 0;
+								if (i >= imgs.length) {
+                                    document.getElementById('nextButton').disabled = true;
+									i = imgs.length - 1;
 								}
                                 img.src = "resources/ins/" + imgs[i];
                             }
 							function prevImg(){
 								var img = document.getElementById('ins-arch');
+                                if (i == imgs.length - 1) {
+                                    document.getElementById('nextButton').disabled = false;
+                                }
 								i = i - 1;
 								if (i < 0) {
-									i = imgs.length - 1;
+                                    document.getElementById('prevButton').disabled = true;
+									i = 0;
 								}
 								img.src = "resources/ins/" + imgs[i];
 							}
