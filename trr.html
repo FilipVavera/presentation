@@ -56,7 +56,11 @@
 					<h2>What is goal?</h2>
 					<ol>
 						<li class="fragment">We have automated tests and we have results from them</li>
-						<li class="fragment">We have a lot of test results</li>
+						<li class="fragment">We have a lot of test results
+                            <ul>
+                                <li class="fragment">We spend a lot of time by manually reporting this results on TestRail</li>
+                            </ul>
+                        </li>
 						<li class="fragment">We have TestRail with API</li>
                         <li class="fragment"><strong class="color1">...so why do it manually?</strong></li>
 					</ol>
@@ -151,6 +155,13 @@
                         <div class="fragment">
                             <h4>Command line</h4>
                             <p>Can be run from command line - <strong class="color">simple run <code>trr</code></strong></p>
+                            <p class="fragment">Or with options: <code>trr -v --path test-result/login.json --no-delete</code></p>
+                            <ul>
+                                <li>Verbose output</li>
+                                <li>Custom path and name of results.json file</li>
+                                <li>Don't delete results.json file</li>
+                            </ul>
+                            <p class="fragment">All arguments can be found - <code>trr --help</code></p>
                             <br />
                         </div>
                         <div class="fragment">
