@@ -57,150 +57,62 @@
 				<section>
 					<h2>What is goal?</h2>
 					<ol>
-						<li class="fragment">We have automated tests and we have results from them</li>
-						<li class="fragment">We have a lot of test results</li>
-						<li class="fragment">We have TestRail with API</li>
-                        <li class="fragment"><strong class="color">...so why do it manually?</strong></li>
+						<li class="fragment">To have automated tests for Inspector</li>
+						<li class="fragment">Automatically test as much as possible</li>
+						<li class="fragment">Run tests on all platforms</li>
+                        <li class="fragment"><strong class="color">...speed up regression testing process!</strong></li>
 					</ol>
 				</section>
 
-				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
-						<h2>Architecture</h2>
-                        <img style="margin: 0;" id="ins-arch" src="resources/ins/ani1.png" height="550px" /><br>
-						<button id="prevButton" onclick="prevImg();" disabled>Prev img</button>
-                        <button id="nextButton" onclick="nextImg();">Next img</button>
-						<script>
-                            function nextImg() {
-                                var img = document.getElementById('ins-arch');
-                                if (i == 0) {
-                                    document.getElementById('prevButton').disabled = false;
-                                }
-								i = i + 1;
-								if (i >= imgs.length - 1) {
-                                    document.getElementById('nextButton').disabled = true;
-									i = imgs.length - 1;
-								}
-                                img.src = "resources/ins/" + imgs[i];
+					<h2>Architecture</h2>
+                    <img style="margin: 0;" id="ins-arch" src="resources/ins/ani1.png" height="550px" /><br>
+					<button id="prevButton" onclick="prevImg();" disabled>Prev img</button>
+                    <button id="nextButton" onclick="nextImg();">Next img</button>
+					<script>
+                        function nextImg() {
+                            var img = document.getElementById('ins-arch');
+                            if (i == 0) {
+                                document.getElementById('prevButton').disabled = false;
                             }
-							function prevImg(){
-								var img = document.getElementById('ins-arch');
-                                if (i == imgs.length - 1) {
-                                    document.getElementById('nextButton').disabled = false;
-                                }
-								i = i - 1;
-								if (i <= 0) {
-                                    document.getElementById('prevButton').disabled = true;
-									i = 0;
-								}
-								img.src = "resources/ins/" + imgs[i];
+							i = i + 1;
+							if (i >= imgs.length - 1) {
+                                document.getElementById('nextButton').disabled = true;
+								i = imgs.length - 1;
 							}
-                        </script>
-					</section>
-					<section>
-						<h2>TestRail API</h2>
-						<p>Some official low-level implementation for python</p>
-					</section>
-					<section>
-						<h2>Test results</h2>
-						<p>They are in various format. Every project has his own structure.</p>
-                        <br />
-                        <br />
-                        <p class="fragment"><strong class="color">We need standard file structure of test results</strong></p>
-					</section>
-                    <section>
-                        <h2>results.json</h2>
-                        <pre><code class="json" data-trim contenteditable>
-{
-    "user": "Your_TestRail_username",
-    "password": "Your_API_key_or_password",
-    "project_id": 0,
-    "suite_id": 0,
-
-    "run_name": "Name of your run - system - browser - build - timestamp is added automatically",
-    "sections": [
-        {
-            "name": "Section name",
-            "description": "Section description - optional",
-            "sections": [
-                {
-                    "name": "Sub section",
-                    "cases": [
-                        {
-
+                            img.src = "resources/ins/" + imgs[i];
                         }
-                    ]
-                },
-                {
-
-                }
-            ],
-            "cases": [
-                {
-                    "title": "Case name",
-                    "result": false,
-                    "comment": "Optional and is added only when test failed"
-                },
-                {
-                    "title": "Another case",
-                    "result": true,
-                    "comment": "This comment will be ignored"
-                },
-                {
-
-                }
-            ]
-        },
-        {
-
-        }
-    ]
-}
-                        </code></pre>
-                    </section>
+						function prevImg(){
+							var img = document.getElementById('ins-arch');
+                            if (i == imgs.length - 1) {
+                                document.getElementById('nextButton').disabled = false;
+                            }
+							i = i - 1;
+							if (i <= 0) {
+                                document.getElementById('prevButton').disabled = true;
+								i = 0;
+							}
+							img.src = "resources/ins/" + imgs[i];
+						}
+                    </script>
 				</section>
 
-				<section>
-                    <section>
-					    <h2>How it works</h2>
-					    <ol>
-                            <li class="fragment">Load results.json - check validity</li>
-                            <li class="fragment">Load credentials</li>
-                            <li class="fragment">Load test suite from TestRail</li>
-                            <li class="fragment"><q>Add missing test cases</q></li>
-                            <li class="fragment">Create test run configuration</li>
-                            <li class="fragment">Push test run to TestRail</li>
-                        </ol>
-                    </section>
-                    <section style="text-align: left">
-                        <h2 style="text-align: center">Usage</h2>
-                        <div class="fragment">
-                            <h4>Command line</h4>
-                            <p>Can be run from command line - <strong class="color">simple run <code>trr</code></strong></p>
-                            <br />
-                        </div>
-                        <div class="fragment">
-                            <h4>In python script</h4>
-                            <pre><code class="python" data-trim>
-import trr
-
-with open('results.json', 'r') as f:
-    trr.push_test_results(f)
-                            </code></pre>
-                        </div>
-                    </section>
-				</section>
+                <section>
+				    <h2>How it works</h2>
+                </section>
 
 				<section>
 					<h2>How is it developed</h2>
 					<ul>
                         <li class="fragment">Developed in python 2.7 - works on <strong class="color">every system</strong></li>
-                        <li class="fragment">Developed as python package - reusable in <strong class="color">every python code</strong></li>
-                        <li class="fragment">After installation it behaves as app - can be run <strong class="color">directly from command line</strong></li>
-                        <li class="fragment">Implements command line arguments</li>
-                        <li class="fragment">Implements own log system</li>
-                        <li class="fragment">Pretty rich documentation</li>
+                        <li class="fragment">Developed with Selenium framework</li>
+                        <li class="fragment">Using framework <code>unittest</code></li>
+                        <li class="fragment">Every test is standalone and can be run separately
+                            <ul>
+                                <li class="fragment">Delete settings and license file</li>
+                            </ul>
+                        </li>
+                        <li class="fragment">Separate package for framework and tests</li>
 					</ul>
 				</section>
 
@@ -209,11 +121,6 @@ with open('results.json', 'r') as f:
 					<p>
 
 					</p>
-				</section>
-
-				<section>
-					<aside class="notes">
-					</aside>
 				</section>
 
 				<section>
