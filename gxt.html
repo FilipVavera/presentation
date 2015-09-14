@@ -52,50 +52,44 @@
                     </p>
 				</section>
 
-				
-
 				<section>
 					<h2>Why we did it?</h2>
 					<ol>
-						
-						
 						<li class="fragment">To automate regression tests so QA can work on other testing tasks</li>
-<li class="fragment">Automated tests take much less human time than manual testing</li>
+						<li class="fragment">Automated tests take much less human time than manual testing</li>
 						<li class="fragment">Run the testing in TeamCity and monitor the test results on daily basis</li>
-            
 					</ol>
 				</section>
 
-<section>
+				<section>
 					<h2>What is it?</h2>
 					<ul>
 						<li class="fragment">Package of automated tests for testing GXT examples</li>
 						<li class="fragment">Testing examples in chosen browser</li>
 						<li class="fragment">Every example has seperated tests</li>
 						<li class="fragment">Capability of posting test results to the TestRail</li>
-</ul>
+					</ul>
 				</section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
 						<h2>Architecture</h2>
-                        
-				<ul>
-                            		<li class="fragment">All tests are written in <strong class="color">Java</strong></li>
-                            		<li class="fragment">Test framework <strong class="color">JUnit</strong></li>
-					<li class="fragment"><strong class="color">Selenium WebDriver</strong> for testing browsers</li>
-					<li class="fragment">Fetch the example via <strong class="color">URL</strong> from <strong class="color">web server</strong></li>
-					<li class="fragment"><strong class="color">Maven</strong> dependencies manager</li>
-					<li class="fragment">Creating xml result files via <strong class="color">Maven Surefire</strong> plugin</li>
-					<li class="fragment">Posting results over <strong class="color">Trr</strong> script</li>
-                       		</ul>
+						<ul>
+							<li class="fragment">All tests are written in <strong class="color">Java</strong></li>
+							<li class="fragment">Test framework <strong class="color">JUnit</strong></li>
+							<li class="fragment"><strong class="color">Selenium WebDriver</strong> for testing browsers</li>
+							<li class="fragment">Fetch the example via <strong class="color">URL</strong> from <strong class="color">web server</strong></li>
+							<li class="fragment"><strong class="color">Maven</strong> dependencies manager</li>
+							<li class="fragment">Creating xml result files via <strong class="color">Maven Surefire</strong> plugin</li>
+							<li class="fragment">Posting results over <strong class="color">Trr</strong> script</li>
+						</ul>
 					</section>
+
 					<section>
 						<h2>Work flow</h2>
-						<div><img src="architecture.png" height="400px"/></div>
+						<img src="architecture.png" height="400px"/>
 					</section>
-					
 				</section>
 
 				<section>
@@ -108,54 +102,50 @@
                             <li class="fragment">All JUnit <q>@Test</q> run one by one</li>
                             <li class="fragment">Surefire saves the results to the xml file</li>
                             <li class="fragment">ConvertResult() method converts the xml file to json</li>
-			    <li class="fragment">When test run finishes Trr script pushes the results to the TestRail</li>
+							<li class="fragment">When test run finishes Trr script pushes the results to the TestRail</li>
                         </ol>
                     </section>
-			<section>
-<h2>Testing properties</h2>
-<ul>
-                            
-<li class="fragment">Driver setup for each browser (profile)</li>
-<li class="fragment">Assertion testing</li>
-<li class="fragment">Native events (moveTo, doubleClick, dragAndDrop,..)</li>
-<li class="fragment">Using xPath with CSS classes</li>
-<li class="fragment">Run tests from IDE or console</li>
-<li class="fragment">Testing devices or server needs GUI</li>
-</ul>
-</section>
-<section>
-<h1>Demo</h1>
-<ol><p class="fragment"><strong class="color">Commands</strong></p>
-<li class="fragment" style="font-family:Courier New">mvn test</li>
-                            <li class="fragment" style="font-family:Courier New">trr</li>
-</ol>
-</section>
-                  
 
+					<section>
+						<h2>Testing properties</h2>
+						<ul>
+							<li class="fragment">Driver setup for each browser (profile)</li>
+							<li class="fragment">Assertion testing</li>
+							<li class="fragment">Native events (moveTo, doubleClick, dragAndDrop,..)</li>
+							<li class="fragment">Using xPath with CSS classes</li>
+							<li class="fragment">Run tests from IDE or console</li>
+							<li class="fragment">Testing devices or server needs GUI</li>
+						</ul>
+					</section>
+
+					<section>
+						<h1>Demo</h1>
+						<h4>Commands</h4>
+						<ol>
+							<li class="fragment"><code>mvn test</code></li>
+							<li class="fragment"><code>trr</code></li>
+						</ol>
+					</section>
 				</section>
 
 				<section>
 					<h2>Final product - Next steps?</h2>
-<ul>
-					<li class="fragment">Support for Safari and IE</li>
+					<ul>
+						<li class="fragment">Support for Safari and IE</li>
                         <li class="fragment">Integration with TeamCity</li>
-                       <li class="fragment">Extending automation with regression test</li>
-<li class="fragment">Prototype touch support</li>
+						<li class="fragment">Extending automation with regression test</li>
+						<li class="fragment">Prototype touch support</li>
 					</ul>
 				</section>
 
-		
-
 				<section>
 					<h1>Thank You for attention</h1>
-<br />
-<br />
-<br />
-<p><a href="index.html"><button class="back">Back</button></a></p>
+					<br />
+					<br />
+					<br />
+					<p><a href="index.html"><button class="back">Back</button></a></p>
 				</section>
-
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
@@ -184,6 +174,5 @@
 			});
 
 		</script>
-
 	</body>
 </html>
