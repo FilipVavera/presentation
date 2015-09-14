@@ -141,29 +141,32 @@
                         </ol>
                     </section>
 
-                    <section style="text-align: left">
-                        <h2 style="text-align: center">Usage</h2>
-                        <div class="fragment">
-                            <h4>Command line</h4>
-                            <p>Can be run from command line - <strong class="color">simple run <code>trr</code></strong></p>
-                            <p class="fragment">Or with options: <code>trr -v --path test-result/login.json --no-delete</code></p>
-                            <ul>
-                                <li class="fragment">Verbose output</li>
-                                <li class="fragment">Custom path and name of results.json file</li>
-                                <li class="fragment">Don't delete results.json file</li>
-                            </ul>
-                            <p class="fragment">All arguments can be found in <a href="http://192.168.88.129/TestRail/docs/" target="_blank">docs</a> or type <code>trr --help</code></p>
-                            <br />
-                        </div>
-                        <div class="fragment">
-                            <h4>In python script</h4>
-                            <pre><code class="python" data-trim>
+                    <section>
+                        <h2>Usage</h2>
+                        <h4>Command line</h4>
+                        <p>Can be run from command line - <strong class="color">simple run <code>trr</code></strong></p>
+                        <p class="fragment"><code>trr -v --path test-result/login.json --no-delete</code></p>
+                        <ul>
+                            <li>
+                                <ul>
+                                    <li class="fragment">Verbose output</li>
+                                    <li class="fragment">Custom path and name of results.json file</li>
+                                    <li class="fragment">Don't delete results.json file</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p class="fragment">All arguments can be found in <a href="http://192.168.88.129/TestRail/docs/" target="_blank">docs</a> or type <code>trr --help</code></p>
+                    </section>
+
+                    <section>
+                        <h2>Usage</h2>
+                        <h4>In python script</h4>
+                        <pre><code class="python" data-trim>
 import trr
 
 with open('results.json', 'r') as f:
     trr.push_test_results(f)
-                            </code></pre>
-                        </div>
+                        </code></pre>
                     </section>
 				</section>
 
