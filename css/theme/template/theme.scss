@@ -399,3 +399,19 @@ body {
   background-color: darken($backgroundColor, 10%);
   cursor: inherit;
 }
+
+.reveal button.back {
+  background-color: $linkColor;
+  height: 30px;
+  border: 0;
+  line-height: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 7px 13px;
+  color: #FFFFFF;
+}
+
+
+.reveal button.back:hover {
+  background-color: darken($backgroundColor, 20%);
+}
