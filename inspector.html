@@ -59,7 +59,7 @@
 					<ol>
 						<li class="fragment">To have automated tests for Inspector</li>
 						<li class="fragment">Automatically test as much as possible</li>
-						<li class="fragment">Run tests on all platforms</li>
+						<li class="fragment">Run tests on all supported platforms</li>
                         <li class="fragment"><strong class="color">...speed up regression testing process!</strong></li>
 					</ol>
 				</section>
@@ -82,7 +82,7 @@
 								<li>ExtJS 6 live theming</li>
 							</ul>
 						</li>
-						<li class="fragment">Can be run on Windows, OS X, <i>Linux (planned)</i></li>
+						<li class="fragment">Can be run on Windows, OS X, <em>Linux (planned)</em></li>
 						<div class="fragment">
 						<li >Can inspect apps in all supported browsers by ExtJS</li>
 						</div>
@@ -128,29 +128,6 @@
 					<h2>How it works</h2>
 					<img style="margin: 0;" id="ins-arch" src="resources/ins/schema.png" /><br>
 				</section>
-				<section>
-                    <section>
-					    <h2>How it works</h2>
-					    <ol>
-                            <li class="fragment">Load results.json - check validity</li>
-                            <li class="fragment">Load credentials</li>
-                            <li class="fragment">Load test suite from TestRail</li>
-                            <li class="fragment"><q>Add missing test cases</q></li>
-                            <li class="fragment">Create test run configuration</li>
-                            <li class="fragment">Push test run to TestRail</li>
-                        </ol>
-                    </section>
-                    <section style="text-align: left">
-                        <h2 style="text-align: center">Usage</h2>
-                        <div class="fragment">
-                            <h4>Command line</h4>
-                            <p>Can be run from command line - <strong class="color">simple run <code>trr</code></strong></p>
-                            <br />
-                        </div>
-                        <div class="fragment">
-                            <h4>In python script</h4>
-                            <pre><code class="python" data-trim>
-import trr
 
 				<section>
 					<h2>How is it developed</h2>
@@ -161,6 +138,10 @@ import trr
                         <li class="fragment">Every test is standalone and can be run separately
                             <ul>
                                 <li class="fragment">Delete settings and license file</li>
+								<li class="fragment">We can connect various ExtJS apps</li>
+								<li class="fragment">We can simultaneously control both <br>
+									inspector and inspected app</li>
+
                             </ul>
                         </li>
                         <li class="fragment">Separate package for framework and tests</li>
@@ -168,10 +149,35 @@ import trr
 				</section>
 
 				<section>
-					<h2>Integrations</h2>
-					<p>
+					<h2>Already Automated</h2>
+					<ul>
+						<li class="fragment">Whole logging process
+						<ul>
+							<li>Loggin UI</li>
+							<li>All possible user accounts (valid, trial, invalid, expired etc)</li>
+						</ul>
+						</li>
+						<li class="fragment">Settings
+						<ul>
+							<li>Settings UI</li>
+							<li>Changing ports</li>
+							<li>Changing protocol (https)</li>
+						</ul>
+						</li>
+						<div class="fragment">
+						<li><em>Connecting the multiple Apps (deprecated)</em></li>
+						<li><em>App Inspector Interface (deprecated)</em></li>
+						<li><em>Store Tests (deprecated)</em></li>
+						</div>
 
-					</p>
+					</ul>
+				</section>
+				<section>
+					<h2>Integration</h2>
+					<ul>
+						<li>Integrated TestRail results (depracted)</li>
+						<li>Planning to integrate with TRR </li>
+					</ul>
 				</section>
 
 				<section>
