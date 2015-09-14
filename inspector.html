@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>TestRail result</title>
+		<title>Inspector automation</title>
 
 		<meta name="description" content="Presentation for Ryan and Pat about Inspector automation">
-		<meta name="author" content="Filip Vavera">
+		<meta name="author" content="Filip Vavera and Petr Večeřa">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -20,27 +20,13 @@
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-            var imgs = ['ani1.png', 'ani2.png', 'ani3.png', 'ani4.png', 'ani5.png', 'ani6.png','ani7.png'];
-            var i = 0;
-		</script>
-
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 
 	<body>
-
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
 					<h1>Inspector automation</h1>
@@ -50,7 +36,10 @@
                     <br />
                     <a href="https://www.sencha.com/" target="_blank"><img src="sencha-logo.png" height="200px"/></a>
                     <p>
-                        <small>Created by <strong>Filip Vavera</strong> &lt;<a href="mailto://filip.vavera@profiq.com">filip.vavera@profiq.com</a>&gt; and <strong>Petr Večeřa</strong> &lt;<a href="mailto://petr.vecera@profiq.com">petr.vecera@profiq.com</a>&gt;</small>
+                        <small>
+                            Created by <strong>Filip Vavera</strong> &lt;<a href="mailto://filip.vavera@profiq.com">filip.vavera@profiq.com</a>&gt;
+                            and <strong>Petr Večeřa</strong> &lt;<a href="mailto://petr.vecera@profiq.com">petr.vecera@profiq.com</a>&gt;
+                        </small>
                     </p>
 				</section>
 
@@ -71,7 +60,7 @@
 							<ul>
 								<li>Component overview</li>
 								<li>Event viewer</li>
-								<li>Layuot Runs</li>
+								<li>Layout Runs</li>
 								<li>Stores explorer</li>
 								<li>App details and App Architecture</li>
 							</ul>
@@ -83,11 +72,7 @@
 							</ul>
 						</li>
 						<li class="fragment">Can be run on Windows, OS X, <em>Linux (planned)</em></li>
-						<div class="fragment">
-						<li >Can inspect apps in all supported browsers by ExtJS</li>
-						</div>
-
-
+						<li class="fragment">Can inspect apps in all supported browsers by ExtJS</li>
 					</ol>
 				</section>
 
@@ -126,7 +111,7 @@
 
 				<section>
 					<h2>How it works</h2>
-					<img style="margin: 0;" id="ins-arch" src="resources/ins/schema.png" /><br>
+					<img style="margin: 0;" src="resources/ins/schema.png" /><br>
 				</section>
 
 				<section>
@@ -140,9 +125,10 @@
                             <ul>
                                 <li class="fragment">Delete settings and license file</li>
 								<li class="fragment">We can connect various ExtJS apps</li>
-								<li class="fragment">We can simultaneously control both <br>
-									inspector and inspected app</li>
-
+								<li class="fragment">
+                                    We can simultaneously control both <br>
+									inspector and inspected app
+                                </li>
                             </ul>
                         </li>
 					</ul>
@@ -153,7 +139,7 @@
 					<ul>
 						<li class="fragment">Whole logging process
 						<ul>
-							<li>Loggin UI</li>
+							<li>Login UI</li>
 							<li>All possible user accounts (valid, trial, invalid, expired etc)</li>
 						</ul>
 						</li>
@@ -172,35 +158,35 @@
 
 					</ul>
 				</section>
+
 				<section>
-					<h2>Integration</h2>
-					<ul>
-						<li>Integrated TestRail results (depracted)</li>						
-					</ul>
+					<div class="fragment">
+						<h2>Integration</h2>
+						<ul>
+							<li>Integrated TestRail results (depracted)</li>
+						</ul>
+					</div>
                     <br><br><br>
-                    <h2>Next steps</h2>
-                    <ul>
-                        <li>Planning to integrate with TRR </li>
-                        <li><strong class="color">Automate up to 80% of the test cases</strong></li>
-                        <li>Continuous integration (long term )</li>
-                    </ul>
+					<div class="fragment">
+                    	<h2>Next steps</h2>
+                    	<ul>
+                    	    <li>Planning to integrate with TRR </li>
+                    	    <li><strong class="color">Automate up to 80% of the test cases</strong></li>
+                    	    <li>Continuous integration (long term )</li>
+                    	</ul>
+					</div>
 				</section>
 
 				<section>
 					<h1>THE END</h1>
 				</section>
-
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
 		<script>
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: true,
 				progress: true,
@@ -211,7 +197,6 @@
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
@@ -223,6 +208,5 @@
 			});
 
 		</script>
-
 	</body>
 </html>
