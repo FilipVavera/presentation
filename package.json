@@ -1,22 +1,21 @@
 {
-  "name": "reveal.js",
-  "version": "3.1.0",
-  "description": "The HTML Presentation Framework",
-  "homepage": "http://lab.hakim.se/reveal-js",
-  "subdomain": "revealjs",
+  "name": "presentations",
+  "version": "1.1.0",
+  "description": "Profiq - Sencha team presentations",
+  "homepage": "http://192.168.88.176/presentation/",
   "main": "js/reveal.js",
   "scripts": {
     "test": "grunt test",
     "start": "grunt serve"
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
+    "name": "Filip Vavera",
+    "email": "filip.vavera@profiq.com",
+    "web": "https://profiq.com/"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git://github.com/FilipVavera/presentation.git"
   },
   "engines": {
     "node": "~0.10.0"
@@ -40,6 +39,6 @@
     "grunt": "~0.4.0",
     "node-sass": "~0.9.3"
   },
-  
+
   "license": "MIT"
 }
