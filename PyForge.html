@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>TestRail result</title>
+
+        <link href="resources/favicon.ico" rel="icon" type="image/x-icon">
+
+		<meta name="description" content="Presentation for ForgeRock about OpenAM UI tests">
+		<meta name="author" content="Filip Vavera">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/profiq.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>OpenAM UI tests</h1>
+					<h4>PyForge tests for OpenAM in Selenium</h4>
+                    <br />
+                    <br />
+                    <a href="https://www.profiq.com/" target="_blank"><img src="resources/profiq-logo.png" height="200px"/></a>
+                    <p>
+                        <small>Created by <strong>Filip Vavera</strong> &lt;<a href="mailto://filip.vavera@profiq.com">filip.vavera@profiq.com</a>&gt;</small>
+                    </p>
+				</section>
+
+				<section>
+					<h2>What is goal?</h2>
+					<ol>
+						<li class="fragment">To have automated UI tests for OpenAM</li>
+						<li class="fragment">Run them in various browsers on various platforms</li>
+						<li class="fragment">Run them continuously</li>
+                        <li class="fragment"><strong class="color1">...definitely task for Profiq!</strong></li>
+					</ol>
+				</section>
+
+				<section>
+                    <h2>Architecture</h2>
+                    <ul>
+                        <li class="fragment">OpenAM running in Tomcat (on local system or remotely)</li>
+                        <li class="fragment">Tests in Python</li>
+                        <li class="fragment">Robot to execute these tests</li>
+                    </ul>
+				</section>
+
+				<section>
+                    <section>
+					    <h2>How it works</h2>
+					    <ol>
+                            <li class="fragment">Deploy local OpenAM (PyForge do that)</li>
+                            <li class="fragment">Open OpenAM in browser (Selenium)</li>
+                            <li class="fragment">Run tests in browser</li>
+                        </ol>
+                    </section>
+
+                    <section>
+                        <h2>Usage</h2>
+                        <ol>
+                            <li class="fragment">Clone PyForge repo
+                                <ul>
+                                    <li class="fragment"><code>git clone https://stash.forgerock.org/scm/qa/pyforge.git PyForge</code></li>
+                                </ul>
+                            </li>
+                            <li class="fragment">Configure PyForge for OpenAM
+                                <ul>
+                                    <li class="fragment"><code>./configure OpenAM</code></li>
+                                    <li class="fragment">Set OpenAM version (12.0.1) and browser</li>
+                                </ul>
+                            </li>
+                            <li class="fragment">Run OpenAM UI tests
+                                <ul>
+                                    <li class="fragment"><code>./run-pybot.py --category ui OpenAM</code></li>
+                                    <li class="fragment"><code>./run-pybot.py --category ui --suite policy_editor OpenAM</code></li>
+                                    <li class="fragment"><code>./run-pybot.py --category ui --suite login.Registration OpenAM</code></li>
+                                    <li class="fragment"><code>./run-pybot.py -c ui -s login.Login -t BlankPassword OpenAM</code></li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </section>
+				</section>
+
+				<section>
+					<h2>How is it developed</h2>
+					<ul>
+                        <li class="fragment">Developed in python (2.6.6 &lt;= python --version &gt; 3.0.0)</li>
+                        <li class="fragment">Using Selenium</li>
+					</ul>
+				</section>
+
+				<section>
+                    <h2>Demo - IdeaPlugin</h2>
+                    <ul>
+                        <li class="fragment">Pull latest code from GitHub</li>
+                        <li class="fragment">Run tests</li>
+                        <li class="fragment">Convert test results from XML to JSON</li>
+                        <li class="fragment">Push test results to TestRail</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+
+				<section>
+					<h1>THE END</h1>
+                    <br />
+                    <br />
+                    <br />
+                    <p><a href="index.html"><button class="back">Back</button></a></p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+                history: true,
+                slideNumber: 'c / t',
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

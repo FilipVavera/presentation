@@ -1,25 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
-/**
- * Black theme for reveal.js.
- *
- * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
- */
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #DADADA; }
+  background: #002c62; }
 
 .reveal {
   font-family: 'Open Sans', sans-serif;
   font-size: 30px;
   font-weight: normal;
-  color: #1A1A1A; }
+  color: #DADADA; }
 
 ::selection {
   color: #fff;
-  background: #000;
+  background: #FFF;
   text-shadow: none; }
 
 .reveal .slides > section, .reveal .slides > section > section {
@@ -31,7 +26,7 @@ body {
  *********************************************/
 .reveal h1, .reveal h2, .reveal h3 {
   margin: 0 0 20px 0;
-  color: #87BD3E;
+  color: #8ec549;
   font-family: 'Montserrat', Impact, sans-serif;
   font-weight: normal;
   line-height: 1.2;
@@ -42,7 +37,7 @@ body {
 
 .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
-  color: #054059;
+  color: #c3c6c8;
   font-family: 'Montserrat', Impact, sans-serif;
   font-weight: normal;
   line-height: 1.2;
@@ -70,13 +65,13 @@ body {
  * OTHER
  *********************************************/
 .reveal strong {
-  color: #054059; }
+  color: #c3c6c8; }
 
 .reveal strong.color1 {
-  color: #94c54f; }
+  color: #9bcb5c; }
 
 .reveal strong.color2 {
-  color: #065371; }
+  color: #d0d3d4; }
 
 .reveal p {
   margin: 20px 0;
@@ -282,45 +277,5 @@ body {
 .reveal .slide-number {
   color: #F08844; }
 
-/*********************************************
- * BUTTONS
- *********************************************/
-.reveal button {
-  background-color: #87BD3E;
-  cursor: pointer;
-  height: auto;
-  border: 0;
-  line-height: 14px;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 500;
-  padding: 7px 13px;
-  display: inline-block;
-  vertical-align: middle;
-  color: #FFFFFF;
-  letter-spacing: 0.5px;
-  margin-bottom: 9px;
-  border-radius: 0; }
-
-.reveal button:active {
-  background-color: #F08844; }
-
-.reveal button:hover {
-  background-color: #a7a7a7; }
-
-.reveal button[disabled], button[disabled]:active, button[disabled]:hover {
-  background-color: #c1c1c1;
-  cursor: inherit; }
-
-.reveal button.back {
-  background-color: #F08844;
-  height: 30px;
-  border: 0;
-  line-height: 14px;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 7px 13px;
-  color: #FFFFFF; }
-
-.reveal button.back:hover {
-  background-color: #a7a7a7; }
+.reveal code {
+  font-size: 20px; }
